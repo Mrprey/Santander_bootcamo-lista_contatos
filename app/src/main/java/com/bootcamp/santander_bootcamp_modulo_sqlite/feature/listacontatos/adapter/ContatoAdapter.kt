@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bootcamp.santander_bootcamp_modulo_sqlite.R
+
+import com.bootcamp.santander_bootcamp_modulo_sqlite.feature.listacontatos.model.ContatosVO
+import com.everis.listadecontatos.R.layout.item_contato
 
 class ContatoAdapter(
         private val context: Context,
@@ -13,7 +15,7 @@ class ContatoAdapter(
         private val onClick: ((Int) -> Unit)
 ) : RecyclerView.Adapter<ContatoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContatoViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_contato,parent,false)
+        val view = LayoutInflater.from(context).inflate(item_contato,parent,false)
         return ContatoViewHolder(view)
     }
 

@@ -1,9 +1,9 @@
-package com.bootcamp.santander_bootcamp_modulo_sqlite.feature.listacontatos.bases
+package com.bootcamp.santander_bootcamp_modulo_sqlite.bases
 
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.bootcamp.santander_bootcamp_modulo_sqlite.R
+import com.everis.listadecontatos.R
 
 open class BaseActivity : AppCompatActivity(){
     protected fun setupToolBar(toolBar: Toolbar, title: String, navgationBack: Boolean) {

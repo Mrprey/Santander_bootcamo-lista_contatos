@@ -5,18 +5,23 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bootcamp.santander_bootcamp_modulo_sqlite.R
-import com.bootcamp.santander_bootcamp_modulo_sqlite.feature.listacontatos.bases.BaseActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.bootcamp.santander_bootcamp_modulo_sqlite.application.ContatoApplication
+import com.bootcamp.santander_bootcamp_modulo_sqlite.bases.BaseActivity
+import com.bootcamp.santander_bootcamp_modulo_sqlite.feature.contato.ContatoActivity
+import com.bootcamp.santander_bootcamp_modulo_sqlite.feature.listacontatos.adapter.ContatoAdapter
+import com.bootcamp.santander_bootcamp_modulo_sqlite.feature.listacontatos.model.ContatosVO
+import com.everis.listadecontatos.R.layout.activity_main
+//import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
+
 
 class MainActivity : BaseActivity() {
 
-    private var adapter:ContatoAdapter? = null
+    private var adapter: ContatoAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(activity_main)
         setupToolBar(toolBar, "Lista de contatos",false)
         setupListView()
         setupOnClicks()
@@ -37,7 +42,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun onClickAdd(){
-        val intent = Intent(this,ContatoActivity::class.java)
+        val intent = Intent(this, ContatoActivity::class.java)
         startActivity(intent)
     }
 
